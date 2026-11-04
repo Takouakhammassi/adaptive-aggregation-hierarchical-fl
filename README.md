@@ -50,9 +50,6 @@ Each region uses only local observations (arrival counts, delays).
 2. It mostly reduces the *severity* of accuracy collapses (worst drop in `high`, k = 2:
    0.198 → 0.069); with k = 3 in `high` it also reduces their frequency.
 3. Extra local compute (k = 3 vs k = 2) brings gains of similar size; the two effects add up.
-4. **Negative result:** adaptive edge rounds did not beat a fixed k = 3 in accuracy or speed
-   (`full` ≈ `decay_k3`), and a single-seed test of an adaptive vs fixed τ showed no difference.
-   `full` was the most stable variant, which needs more seeds to be confirmed.
 
 ## Privacy extension (client-level clipping + Gaussian noise)
 
