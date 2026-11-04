@@ -79,7 +79,7 @@ of m updates (a simplified, uniform-weight calibration). Setting: `high` scenari
 ## Reproduce
 ```bash
 pip install -r requirements.txt
-python -m src.run_step8      # multi-seed comparison (long)
+python -m src.run_step8      # multi-seed comparison 
 python -m src.run_step9      # clipping + noise study
 python -m src.stability      # stability statistics
 ```
