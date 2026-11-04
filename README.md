@@ -76,19 +76,6 @@ of m updates (a simplified, uniform-weight calibration). Setting: `high` scenari
 - At σ = 0.1 accuracy drops by 4–5 points and the advantage is no longer visible; for σ ≥ 0.3
   training diverges numerically.
 
-**Limits.** No formal ε is computed. With only 2–3 updates per Edge aggregation, the σ values at
-which the model still trains are far below those usually needed for a meaningful DP guarantee
-(σ ≈ 1 or more); this setup shows the utility/noise trade-off, not a usable privacy guarantee.
-One seed only. Noise is added at every Edge aggregation and accumulates; we did not test
-whether anchoring preserves accumulated noise (a possible explanation for the lost advantage
-at σ = 0.1).
-
-## Limitations
-- One dataset, one small model, 30 clients, simulated dynamics.
-- 3 seeds only: differences below ~1 accuracy point are within noise.
-- Decay and anchoring were not ablated separately.
-- No real secure aggregation; privacy part is a utility/noise study only.
-
 ## Reproduce
 ```bash
 pip install -r requirements.txt
